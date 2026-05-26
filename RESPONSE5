@@ -1,0 +1,20 @@
+{
+  "id": "pmd_1Nnrer2eZvKYlo2Cips79tWl",
+  "object": "payment_method_domain",
+  "apple_pay": {
+    "status": "active"
+  },
+  "created": 1694129445,
+  "domain_name": "example.com",
+  "enabled": false,
+  "google_pay": {
+    "status": "active"
+  },
+  "link": {
+    "status": "active"
+  },
+  "livemode": false,
+  "paypal": {
+    "status": "active"
+  }
+}
