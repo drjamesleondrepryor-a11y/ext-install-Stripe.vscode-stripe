@@ -1,0 +1,179 @@
+{
+  "id": "ba_1MvoIJ2eZvKYlo2CO9f0MabO",
+  "object": "bank_account",
+  "account_holder_name": "Jane Austen",
+  "account_holder_type": "company",
+  "account_type": null,
+  "bank_name": "STRIPE TEST BANK",
+  "country": "US",
+  "currency": "usd",
+  "customer": "cus_9s6XI9OFIdpjIg",
+  "fingerprint": "1JWtPxqbdX5Gamtc",
+  "last4": "6789",
+  "metadata": {
+    "order_id": "6735"
+  },
+  "routing_number": "110000000",
+  "status": "new"
+}
+Retrieve a bank account
+Ask about this section
+Copy for LLM
+
+View as Markdown
+By default, you can see the 10 most recent sources stored on a Customer directly on the object, but you can also retrieve details about a specific bank account stored on the Stripe account.
+
+Parameters
+No parameters.
+
+Returns
+Returns the bank account object.
+
+GET 
+/v1/customers/:id/bank_accounts/:id
+cURL
+curl https://api.stripe.com/v1/customers/{{CUSTOMER_ID}}/bank_accounts/{{BANK_ACCOUNT_ID}} \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:"
+RESPONSE
+{
+  "id": "ba_1MvoIJ2eZvKYlo2CO9f0MabO",
+  "object": "bank_account",
+  "account_holder_name": "Jane Austen",
+  "account_holder_type": "company",
+  "account_type": null,
+  "bank_name": "STRIPE TEST BANK",
+  "country": "US",
+  "currency": "usd",
+  "customer": "cus_9s6XI9OFIdpjIg",
+  "fingerprint": "1JWtPxqbdX5Gamtc",
+  "last4": "6789",
+  "metadata": {},
+  "routing_number": "110000000",
+  "status": "new"
+}
+List all bank accounts
+Ask about this section
+Copy for LLM
+
+View as Markdown
+You can see a list of the bank accounts belonging to a Customer. Note that the 10 most recent sources are always available by default on the Customer. If you need more than those 10, you can use this API method and the limit and starting_after parameters to page through additional bank accounts.
+
+Parameters
+No parameters.
+
+More parameters
+Expand all
+
+ending_before
+string
+A cursor for use in pagination. ending_before is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_bar, your subsequent call can include ending_before=obj_bar in order to fetch the previous page of the list.
+
+
+limit
+integer
+
+starting_after
+string
+Returns
+Returns a list of the bank accounts stored on the customer.
+
+GET 
+/v1/customers/:id/bank_accounts
+cURL
+curl -G https://api.stripe.com/v1/customers/{{CUSTOMER_ID}}/bank_accounts \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:" \
+  -d limit=3
+RESPONSE
+{
+  "object": "list",
+  "url": "/v1/customers/cus_9s6XI9OFIdpjIg/bank_accounts",
+  "has_more": false,
+  "data": [
+    {
+      "id": "ba_1MvoIJ2eZvKYlo2CO9f0MabO",
+      "object": "bank_account",
+      "account_holder_name": "Jane Austen",
+      "account_holder_type": "company",
+      "account_type": null,
+      "bank_name": "STRIPE TEST BANK",
+      "country": "US",
+      "currency": "usd",
+      "customer": "cus_9s6XI9OFIdpjIg",
+      "fingerprint": "1JWtPxqbdX5Gamtc",
+      "last4": "6789",
+      "metadata": {},
+      "routing_number": "110000000",
+      "status": "new"
+    }
+  ]
+}
+Delete a bank account
+Ask about this section
+Copy for LLM
+
+View as Markdown
+You can delete bank accounts from a Customer.
+
+Parameters
+No parameters.
+
+Returns
+DELETE 
+/v1/customers/:id/sources/:id
+Server-side language
+cURL
+curl -X DELETE https://api.stripe.com/v1/customers/{{CUSTOMER_ID}}/sources/{{BANK_ACCOUNT_ID}} \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:"
+RESPONSE
+{
+  "customer": "cus_9s6XKzkNRiz8i3",
+  "id": "ba_1NkxyL2eZvKYlo2CwZgb2mzO",
+  "object": "bank_account",
+  "deleted": true
+}
+Verify a bank account
+Ask about this section
+Copy for LLM
+
+View as Markdown
+Verify a specified bank account for a given customer.
+
+Parameters
+
+amounts
+array of integers
+Two positive integers, in cents, equal to the values of the microdeposits sent to the bank account.
+
+Returns
+POST 
+/v1/customers/:id/sources/:id/verify
+Server-side language
+cURL
+curl https://api.stripe.com/v1/customers/{{CUSTOMER_ID}}/sources/{{BANK_ACCOUNT_ID}}/verify \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:" \
+  -d "amounts[]=32" \
+  -d "amounts[]=45"
+RESPONSE
+{
+  "id": "ba_1NAiwl2eZvKYlo2CRdCLZSxO",
+  "object": "bank_account",
+  "account_holder_name": "Jane Austen",
+  "account_holder_type": "company",
+  "account_type": null,
+  "bank_name": "STRIPE TEST BANK",
+  "country": "US",
+  "currency": "usd",
+  "customer": "cus_9s6XGDTHzA66Po",
+  "fingerprint": "1JWtPxqbdX5Gamtc",
+  "last4": "6789",
+  "metadata": {},
+  "routing_number": "110000000",
+  "status": "new",
+  "name": "Jenny Rosen"
+}
+Need help? Contact Support.
+Chat with Stripe developers on Discord.
+Check out our changelog.
+Questions? Contact Sales.
+LLM? Read llms.txt.
+Powered by Markdoc
