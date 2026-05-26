@@ -1,0 +1,1288 @@
+ {
+  "id": "pmc_abcdef",
+  "object": "payment_method_configuration",
+  "acss_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "active": true,
+  "affirm": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "afterpay_clearpay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "alipay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "apple_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "bancontact": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "card": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "cartes_bancaires": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "eps": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "giropay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "google_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "ideal": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "is_default": true,
+  "klarna": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "link": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "livemode": false,
+  "name": "Default",
+  "p24": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sepa_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sofort": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "us_bank_account": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "wechat_pay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  }
+}
+Create a payment method configuration
+Ask about this section
+Copy for LLM
+
+View as Markdown
+Creates a payment method configuration
+
+Parameters
+
+name
+string
+Required unless parent is provided
+Configuration name.
+
+The maximum length is 100 characters.
+
+
+parent
+string
+Required unless name is provided
+Configuration’s parent configuration. Specify to create a child configuration.
+
+The maximum length is 100 characters.
+
+More parameters
+Expand all
+
+acss_debit
+dictionary
+
+affirm
+dictionary
+
+afterpay_clearpay
+dictionary
+
+alipay
+dictionary
+
+alma
+dictionary
+
+amazon_pay
+dictionary
+
+apple_pay
+dictionary
+
+apple_pay_later
+dictionary
+
+au_becs_debit
+dictionary
+
+bacs_debit
+dictionary
+
+bancontact
+dictionary
+
+billie
+dictionary
+
+blik
+dictionary
+
+boleto
+dictionary
+
+card
+dictionary
+
+cartes_bancaires
+dictionary
+
+cashapp
+dictionary
+
+crypto
+dictionary
+
+customer_balance
+dictionary
+
+eps
+dictionary
+
+fpx
+dictionary
+
+fr_meal_voucher_conecs
+dictionary
+
+giropay
+dictionary
+
+google_pay
+dictionary
+
+grabpay
+dictionary
+
+ideal
+dictionary
+
+jcb
+dictionary
+
+kakao_pay
+dictionary
+
+klarna
+dictionary
+
+konbini
+dictionary
+
+kr_card
+dictionary
+
+link
+dictionary
+
+mb_way
+dictionary
+
+mobilepay
+dictionary
+
+multibanco
+dictionary
+
+naver_pay
+dictionary
+
+nz_bank_account
+dictionary
+
+oxxo
+dictionary
+
+p24
+dictionary
+
+pay_by_bank
+dictionary
+
+payco
+dictionary
+
+paynow
+dictionary
+
+paypal
+dictionary
+
+paypay
+dictionary
+Preview feature
+
+payto
+dictionary
+
+pix
+dictionary
+
+promptpay
+dictionary
+
+revolut_pay
+dictionary
+
+samsung_pay
+dictionary
+
+satispay
+dictionary
+
+sepa_debit
+dictionary
+
+sofort
+dictionary
+
+sunbit
+dictionary
+
+swish
+dictionary
+
+twint
+dictionary
+
+upi
+dictionary
+
+us_bank_account
+dictionary
+
+wechat_pay
+dictionary
+
+zip
+dictionary
+Returns
+Returns the payment method configuration object
+
+POST 
+/v1/payment_method_configurations
+Server-side language
+curl https://api.stripe.com/v1/payment_method_configurations \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:" \
+  -d "name=Buy Now Pay Laters"
+RESPONSE
+{
+  "id": "pmc_abcdef",
+  "object": "payment_method_configuration",
+  "acss_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "active": true,
+  "affirm": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "afterpay_clearpay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "alipay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "apple_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "bancontact": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "card": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "cartes_bancaires": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "eps": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "giropay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "google_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "ideal": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "is_default": true,
+  "klarna": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "link": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "livemode": false,
+  "name": "Default",
+  "p24": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sepa_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sofort": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "us_bank_account": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "wechat_pay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  }
+}
+Update payment method configuration
+Ask about this section
+Copy for LLM
+
+View as Markdown
+Update payment method configuration
+
+Parameters
+
+active
+boolean
+Whether the configuration can be used for new payments.
+
+
+name
+string
+Configuration name.
+
+The maximum length is 100 characters.
+
+More parameters
+Expand all
+
+acss_debit
+dictionary
+
+affirm
+dictionary
+
+afterpay_clearpay
+dictionary
+
+alipay
+dictionary
+
+alma
+dictionary
+
+amazon_pay
+dictionary
+
+apple_pay
+dictionary
+
+apple_pay_later
+dictionary
+
+au_becs_debit
+dictionary
+
+bacs_debit
+dictionary
+
+bancontact
+dictionary
+
+billie
+dictionary
+
+blik
+dictionary
+
+boleto
+dictionary
+
+card
+dictionary
+
+cartes_bancaires
+dictionary
+
+cashapp
+dictionary
+
+crypto
+dictionary
+
+customer_balance
+dictionary
+
+eps
+dictionary
+
+fpx
+dictionary
+
+fr_meal_voucher_conecs
+dictionary
+
+giropay
+dictionary
+
+google_pay
+dictionary
+
+grabpay
+dictionary
+
+ideal
+dictionary
+
+jcb
+dictionary
+
+kakao_pay
+dictionary
+
+klarna
+dictionary
+
+konbini
+dictionary
+
+kr_card
+dictionary
+
+link
+dictionary
+
+mb_way
+dictionary
+
+mobilepay
+dictionary
+
+multibanco
+dictionary
+
+naver_pay
+dictionary
+
+nz_bank_account
+dictionary
+
+oxxo
+dictionary
+
+p24
+dictionary
+
+pay_by_bank
+dictionary
+
+payco
+dictionary
+
+paynow
+dictionary
+
+paypal
+dictionary
+
+paypay
+dictionary
+Preview feature
+
+payto
+dictionary
+
+pix
+dictionary
+
+promptpay
+dictionary
+
+revolut_pay
+dictionary
+
+samsung_pay
+dictionary
+
+satispay
+dictionary
+
+sepa_debit
+dictionary
+
+sofort
+dictionary
+
+sunbit
+dictionary
+
+swish
+dictionary
+
+twint
+dictionary
+
+upi
+dictionary
+
+us_bank_account
+dictionary
+
+wechat_pay
+dictionary
+
+zip
+dictionary
+Returns
+An object with the updated account payment method configuration
+
+POST 
+/v1/payment_method_configurations/:id
+Server-side language
+curl https://api.stripe.com/v1/payment_method_configurations/pmc_abcdef \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:" \
+  -d "acss_debit[display_preference][preference]=on"
+RESPONSE
+{
+  "id": "pmc_abcdef",
+  "object": "payment_method_configuration",
+  "acss_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "active": true,
+  "affirm": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "afterpay_clearpay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "alipay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "apple_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "bancontact": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "card": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "cartes_bancaires": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "eps": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "giropay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "google_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "ideal": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "is_default": true,
+  "klarna": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "link": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "livemode": false,
+  "name": "Default",
+  "p24": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sepa_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sofort": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "us_bank_account": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "wechat_pay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  }
+}
+Retrieve payment method configuration
+Ask about this section
+Copy for LLM
+
+View as Markdown
+Retrieve payment method configuration
+
+Parameters
+No parameters.
+
+Returns
+A payment method configuration object.
+
+GET 
+/v1/payment_method_configurations/:id
+Server-side language
+curl https://api.stripe.com/v1/payment_method_configurations/pmc_abcdef \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:"
+RESPONSE
+{
+  "id": "pmc_abcdef",
+  "object": "payment_method_configuration",
+  "acss_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "active": true,
+  "affirm": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "afterpay_clearpay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "alipay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "apple_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "bancontact": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "card": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "cartes_bancaires": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "eps": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "giropay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "google_pay": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "ideal": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "is_default": true,
+  "klarna": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "link": {
+    "available": true,
+    "display_preference": {
+      "overridable": null,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "livemode": false,
+  "name": "Default",
+  "p24": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sepa_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "sofort": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "us_bank_account": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "wechat_pay": {
+    "available": false,
+    "display_preference": {
+      "overridable": null,
+      "preference": "off",
+      "value": "off"
+    }
+  }
+}
+List payment method configurations
+Ask about this section
+Copy for LLM
+
+View as Markdown
+List payment method configurations
+
+Parameters
+No parameters.
+
+More parameters
+Expand all
+
+application
+string
+
+ending_before
+string
+
+limit
+integer
+
+starting_after
+string
+Returns
+A list of all payment method configuration objects
+
+GET 
+/v1/payment_method_configurations
+Server-side language
+curl https://api.stripe.com/v1/payment_method_configurations \
+  -u "sk_test_51TbPzJQ3xrTTylRBqBg6AMzp1kf1L4nYhEQPEkUUFnLdkdKY6oJ00IMwAl0SlE3eJAGvKPSuZQFCmBFTakPl8g2a00zhDplTGx:"
+RESPONSE
+{
+  "object": "list",
+  "has_more": false,
+  "data": [
+    {
+      "id": "pmc_1JwXwt2eZvKYlo2CHV7mUH3p",
+      "object": "payment_method_configuration",
+      "acss_debit": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "active": true,
+      "affirm": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "afterpay_clearpay": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "alipay": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "apple_pay": {
+        "available": true,
+        "display_preference": {
+          "overridable": null,
+          "preference": "on",
+          "value": "on"
+        }
+      },
+      "bancontact": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "card": {
+        "available": true,
+        "display_preference": {
+          "overridable": null,
+          "preference": "on",
+          "value": "on"
+        }
+      },
+      "cartes_bancaires": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "eps": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "giropay": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "google_pay": {
+        "available": true,
+        "display_preference": {
+          "overridable": null,
+          "preference": "on",
+          "value": "on"
+        }
+      },
+      "ideal": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "is_default": true,
+      "klarna": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "link": {
+        "available": true,
+        "display_preference": {
+          "overridable": null,
+          "preference": "on",
+          "value": "on"
+        }
+      },
+      "livemode": false,
+      "name": "Default",
+      "p24": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "sepa_debit": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "sofort": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "us_bank_account": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "wechat_pay": {
+        "available": false,
+        "display_preference": {
+          "overridable": null,
+          "preference": "off",
+          "value": "off"
+        }
+      }
+    }
+  ]
+}
+Need help? Contact Support.
+Chat with Stripe developers on Discord.
+Check out our changelog.
+Questions? Contact Sales.
+LLM? Read llms.txt.
+Powered by Markdoc
